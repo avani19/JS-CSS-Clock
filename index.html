@@ -12,5 +12,19 @@
     <div class="hand second-hand"></div>
   </div>
 </div>
+<script type="text/javascript">
+// select css class
+var secondHand = document.querySelector(".second-hand");
+function setDate(){
+  var current = new Date();
+
+  var seconds = current.getSeconds();
+  var secondsDegrees = ((seconds / 60) * 360) + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+}
+setInterval(setDate, 1000);
+setDate();
+</script>
 </body>
 </html>
