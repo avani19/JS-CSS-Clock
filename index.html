@@ -14,13 +14,22 @@
 </div>
 <script type="text/javascript">
 // select css class
+var minHand = document.querySelector(".min-hand");
+var hourHand = document.querySelector(".hour-hand");
 var secondHand = document.querySelector(".second-hand");
+
 function setDate(){
   var current = new Date();
 
+  // setting up second Hand
   var seconds = current.getSeconds();
-  var secondsDegrees = ((seconds / 60) * 360) + 90;
+  var secondsDegrees = ((seconds/60)*360)+90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  // setting up minute Hand
+  // var mins = current.getMinutes();
+  // var minsDegrees = ((mins/60)*360) + ((seconds/60)*6)+90;
+  // minHand.style.transform = `rotate(${minsDegrees}deg)`;
 
 }
 setInterval(setDate, 1000);
