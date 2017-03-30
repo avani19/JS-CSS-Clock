@@ -27,9 +27,9 @@ function setDate(){
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   // setting up minute Hand
-  // var mins = current.getMinutes();
-  // var minsDegrees = ((mins/60)*360) + ((seconds/60)*6)+90;
-  // minHand.style.transform = `rotate(${minsDegrees}deg)`;
+  var mins = current.getMinutes();
+  var minsDegrees = ((mins/60)*360) + ((seconds/60)*6)+90;
+  minHand.style.transform = `rotate(${minsDegrees}deg)`;
 
 }
 setInterval(setDate, 1000);
