@@ -15,7 +15,13 @@ body{
 .clock{
   width: 25rem;
   height: 25rem;
-  border: 1rem solid white;
+  background-image: url("images/images.png");
+  background-size: 28.5rem;
+  
+  /*z-index: 1;*/
+  background-repeat: no-repeat;
+  border: 0.25rem solid ;
+  border-color: transparent;
   border-radius: 50%;
   position: relative;
   margin:50px auto;
